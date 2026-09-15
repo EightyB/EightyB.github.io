@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EightyB | Meat Processing Software</title>
+
+    <meta name="description"
+          content="EightyB is a Perthshire-based software consultancy specialising in the meat industry, to give bespoke software solutions.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2933;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        .hero {
+            background: #f3f4f6;
+            padding: 90px 6%;
+        }
+
+        .hero-content {
+            max-width: 950px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 68px);
+            line-height: 1.05;
+            color: #111827;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 21px;
+            max-width: 760px;
+            color: #4b5563;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #b91c1c;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 75px 6%;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .intro {
+            max-width: 800px;
+            font-size: 18px;
+            color: #4b5563;
+            margin-bottom: 40px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .service {
+            border: 1px solid #e5e7eb;
+            padding: 28px;
+            border-radius: 8px;
+            background: white;
+        }
+
+        .service h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .service p {
+            color: #4b5563;
+        }
+
+        .process {
+            background: #111827;
+            color: white;
+        }
+
+        .process h2 {
+            color: white;
+        }
+
+        .process p {
+            color: #d1d5db;
+        }
+
+        .process-flow {
+            margin-top: 35px;
+            font-size: 19px;
+            font-weight: bold;
+            line-height: 2;
+            color: #f9fafb;
+        }
+
+        .about {
+            background: #f9fafb;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: #4b5563;
+            font-size: 18px;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                display: block;
+            }
+
+            nav {
+                margin-top: 12px;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 18px;
+            }
+
+            .hero {
+                padding: 60px 6%;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">EightyB</div>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>Meat Processing Software</h1>
+
+        <p>
+            Software that understands how your meat business works.
+            EightyB helps abattoirs, cutting plants, game processors
+            and meat businesses improve, update and extend the software
+            they already rely on.
+        </p>
+
+        <a class="button" href="#contact">Talk to EightyB</a>
+
+    </div>
+</section>
+
+<section id="services">
+
+    <div class="container">
+
+        <h2>What we do</h2>
+
+        <p class="intro">
+            We specialise in practical software solutions for businesses
+            where cutting, weighing, production, stock and traceability
+            all need to work together.
+        </p>
+
+        <div class="services">
+
+            <div class="service">
+                <h3>Improve</h3>
+                <p>
+                    Update and extend existing software rather than
+                    replacing systems that still work.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Integrate</h3>
+                <p>
+                    Centralise data, provide multi pc connection, connect scales, scanners, printers,
+                    and other business systems.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Modernise</h3>
+                <p>
+                    Bring older applications up to date
+                    while protecting valuable existing data.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Bespoke</h3>
+                <p>
+                    Build software around the way your business actually
+                    operates when off-the-shelf software isn't enough.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="process">
+
+    <div class="container">
+
+        <h2>We understand the process</h2>
+
+        <p class="intro">
+            Software should support the production process, not force
+            your business to work around the software.
+        </p>
+
+        <div class="process-flow">
+            Cutting → Weighing → Yield → Production → Packing
+            → Labelling → Stock → Traceability → Dispatch
+        </div>
+
+    </div>
+
+</section>
+
+<section id="about" class="about">
+
+    <div class="container">
+
+        <h2>About EightyB</h2>
+
+        <p class="intro">
+            EightyB is a Perthshire-based software consultancy focused
+            on meat cutting and processing businesses across Scotland
+            and the wider UK.
+        </p>
+
+        <p class="intro">
+            Our approach is simple: understand how your business works,
+            identify where software can help, and build practical
+            solutions that deliver measurable improvements.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <h2>Let's talk</h2>
+
+        <p>
+            Have an existing system that needs updating, a production
+            process that needs improving, or an idea for a bespoke
+            solution?
+        </p>
+
+        <!-- Replace this email address with your real business email -->
+        <a class="button"
+           href="mailto:alsmith_dunning@yahoo.com">
+            Contact EightyB
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 EightyB. Perthshire, Scotland.
+</footer>
+
+</body>
+</html>
