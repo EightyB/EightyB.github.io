@@ -59,6 +59,7 @@ section {
     line-height: 1.05;
     color: #111827;
     margin-bottom: 25px;
+    margin: auto;
 }
 
 .hero p {
@@ -92,6 +93,7 @@ section {
 h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    margin: auto;
     color: #111827;
 }
 
