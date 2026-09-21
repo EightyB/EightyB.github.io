@@ -44,6 +44,7 @@ nav a {
     margin: 0 auto;
 }
 
+
 section {
     padding: 75px 6%;
 }
@@ -67,7 +68,7 @@ section {
     color: #4b5563;
     margin-bottom: 35px;
     max-width: 1100px;
-    margin: auto;
+    margin: 0 auto 30px;
 
 }
 
