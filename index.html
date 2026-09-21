@@ -180,6 +180,31 @@
             padding: 25px;
             font-size: 14px;
         }
+```css
+.help-options {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.help-option {
+    flex: 1;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f8f8f8;
+}
+
+.help-option h2 {
+    margin-top: 0;
+}
+
+.help-option .button {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
 
         @media (max-width: 900px) {
             header {
@@ -202,6 +227,8 @@
             section {
                 padding: 55px 6%;
             }
+            .help-options {
+        flex-direction: column;
         }
     </style>
 </head>
@@ -218,28 +245,69 @@
     </nav>
 </header>
 
+
 <section class="hero">
     <div class="hero-content">
 
-        <h1>Help in your basic Software needs</h1>
+        <h1>In need of Business Software?</h1>
 
         <p>
-            EightyB is the trading company of Alan Smith. I am a software engineer with many years experience over diverse industries. 
-        Having worked on many systems, I see there is a gap to be filled in help for smaller businesses who don't have adequate
-        software, people or time to invest in finding the best solution. 
-        </p> 
-        <p>
-        I will analyse what you have, provide suggestions, and implement what you/we decide you would like to improve upon. 
-        </p> 
-        <p>    
-        For example, in Meat Processing, I check how you're currently managing production, stock, weighing, labelling, recipts and invoicing, and traceability. 
-        I then combne these flows in a single database system, available to other users.
+            No software? Old or patchwork software? For basic or more advanced help,
+            look no further.
         </p>
 
-        <a class="button" href="#contact">Talk to EightyB</a>
+
+<div class="help-options">
+
+    <div class="help-option">
+        <h2>No Software / Basic Help</h2>
+        <p>
+            Need help getting started with business software or improving
+            your existing setup?
+        </p>
+
+        <a class="button" href="basic-help.html">Basic Help</a>
+    </div>
+
+    <div class="help-option">
+        <h2>Advanced Software Help</h2>
+        <p>
+            Need a more advanced or bespoke software solution for your business?
+        </p>
+
+        <a class="button" href="advanced-help.html">Advanced Help</a>
+    </div>
+
+</div>
+
+        <p>
+            EightyB is the trading company of Alan Smith. I am a software engineer
+            with many years' experience across diverse industries. My aim is to
+            fill a gap by helping smaller businesses set up or enhance their PC
+            software, where you may not have the people or time to invest in
+            finding the best solution.
+        </p>
+
+        <h2>Paper-based and needing to automate?</h2>
+        <p>
+            I will provide a PC environment that will make your life easier.
+        </p>
+
+        <h2>Current setup inadequate?</h2>
+        <p>
+            Take it to where you want it to be. This is a
+            <strong>simple-to-use</strong> system, which
+            <strong>efficiently does what it says on the tin.</strong>
+            For example, in Meat Processing, I can check how you're currently
+            managing production, stock, weighing, labelling, receipts and
+            invoicing, and traceability. I can then produce a single bespoke
+            application, available to all your users.
+        </p>
 
     </div>
 </section>
+
+
 
 <section id="services">
 
@@ -248,19 +316,18 @@
         <h2>What I do</h2>
 
         <p class="intro">
-            I will check your current system, assess and suggest the best fit for your needs. If you want to upgrade, I can upgrade, whether it be simple spreadsheets,
-            combining sheets into a database, joining diverse apps into a single app or providing a muliple user access system (with a common database), no job is too small.
-            I am always happy to help.
+            I will check your current system, assess and suggest the best fit for your needs. If you want to upgrade, I can upgrade, whether it be Invoice templates, simple spreadsheets,
+            combining sheets into a database, joining diverse apps into a single app or providing muliple user systems, I am always happy to help.
         </p>
 
 
         <div class="services">
 
             <div class="service">
-                <h3>Initial Free Consult</h3>
+                <h3>Free Consult</h3>
                 <p>
                     Assess your current setup.<br> 
-                    Advise on whether you need to improve your software setup.
+                    Advise on whether you should improve your software toolset.
                 </p>
             </div>
 
@@ -274,8 +341,7 @@
             <div class="service">
                 <h3>Improve</h3>
                 <p>
-                    Update and extend or adapt software rather than
-                    replacing systems that still work.
+                    Update and extend or adapt software rather than replacing systems that still work.
                 </p>
             </div>
 
@@ -289,16 +355,14 @@
             <div class="service">
                 <h3>Modernise</h3>
                 <p>
-                    Bring older applications up to date
-                    while protecting valuable existing data and existing friendly views.
+                    Bring older applications up to date while protecting valuable existing data and existing friendly views.
                 </p>
             </div>
 
             <div class="service">
                 <h3>Bespoke</h3>
                 <p>
-                    Build software around the way your business actually
-                    operates when off-the-shelf software isn't enough.
+                    Build software around the way your business actually operates when off-the-shelf software isn't enough.
                 </p>
             </div>
 
@@ -317,9 +381,9 @@
 
     <p class="preserve">
     Software should support the work, not force your business to work around the software.<br>
-    From Auction Houses to Warehouses. EG., For Multi users, I have:<br>
+    From Auction Houses to Warehouses. EG., For multiple user systems, I have:<br>
     Combined Excel sheets into a database for hospital clinical trials.<br>
-    Implemented a control system for meat processing as:
+    Implemented a process flow for meat cutting plants as:
     </p>
 
 
@@ -341,7 +405,8 @@
         <p class="intro">
             EightyB is a Self Trading company based in Poland for myself, Alan Smith. I am a Scot who travels between 
             Warsaw and Perth, and have previously worked in larger companies in Software Engineering. I have had enough of large-scale computing,
-            where the pace of change is small, and am now looking to smaller companies who need a leg-up electronically, whether in basic admin, or technical processing. 
+            where the pace of change is small, and am now looking to smaller companies who need a leg-up electronically, whether in a basic move to Pc, 
+            or more advanced bespoke software. 
         </p>
         <p  class="intro">
              I focus on SME's across the UK and Europe.  I am getting long in the tooth, born in 1965, so like to make use of my long-time colleagues should work build up.
