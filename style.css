@@ -152,7 +152,11 @@ ol.preserve {
 .process p {
     color: #d1d5db;
     margin: 0 auto 30px;
+}
 
+.process p2 {
+    color: #d1d5db;
+    margin: 30px auto 30px;
 }
 
 .process-flow {
