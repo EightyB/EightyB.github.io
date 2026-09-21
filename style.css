@@ -109,6 +109,13 @@ section {
     margin-bottom: 40px;
 }
 
+.preserve p {
+     margin: 0 auto 30px 0;
+}
+.preserve p2 {
+     margin: 0 auto 30px 30px;
+}
+
 ol.preserve {
     margin-top: 0;
     font-size: 18px;
