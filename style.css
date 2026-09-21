@@ -21,10 +21,21 @@ header {
     align-items: center;
 }
 
-.logo {
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info {
     font-size: 28px;
     font-weight: 700;
-    letter-spacing: -1px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
 }
 
 nav a {
