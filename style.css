@@ -25,6 +25,8 @@ header {
     display: flex;
     align-items: center;
     gap: 15px;
+    font-size: 35px;
+    font-weight: 700;
 }
 
 .info {
