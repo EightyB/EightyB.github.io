@@ -269,11 +269,6 @@ footer {
     color: #b91c1c;
 }
 
-@media (max-width: 700px) {
-    .cost-options {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* Responsive layout */
 
@@ -304,6 +299,9 @@ footer {
         flex-direction: column;
     }
     
+    .cost-options {
+        grid-template-columns: 1fr;
+    } 
     .cost-row {
         grid-template-columns: 1fr;
         gap: 8px;
