@@ -79,6 +79,11 @@ h2 {
     margin: 0 0 20px 0;
     color: #111827;
 }
+h3 {
+    font-size: 30px;
+    margin: 0 0 20px 0;
+    color: #111827;
+}
 
 .button {
     display: inline-block;
