@@ -19,14 +19,13 @@
     <div class="brand">
         <a href="index.html" class="logo">
             <img src="images/eightyBCat.png" alt="EightyB">
-        </a>
-    </div>
-        <div class="info">EightyB - For your electronic office</div>
+        </a></div>
+        <div class="info">EightyB</div>
     <nav>
    
-    <a href="basic-help.html">Getting Started - Basic</a>
-    <a href="advanced-help.html">- Advanced</a>
-    <a href="costs.html">Costs</a>
+    <a href="basic-help.html">Getting Started</a>
+    <a href="advanced-help.html">Upgrades</a>
+    <a href="costs.html">Costs   </a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
     <a href="index.html#contact">Contact</a>
@@ -221,15 +220,34 @@
             Does your business need some software, but you do not know where to start?
         </p>
         <p>
-            Do you have an existing system that needs updating, a 
+            Do you have an existing system that needs updating, a
             process that needs improving, or an idea for a tailored
             solution?
         </p>
 
-        <a class="button"
-           href="mailto:alsmith_dunning@yahoo.com">
-            Contact EightyB
-        </a>
+        <form action="https://formspree.io/f/mgavzqlr" method="POST" class="contact-form">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="tel">Tel</label>
+            <input type="text" id="tel" name="tel">
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6"></textarea>
+
+            <button type="submit" class="button">Send Message</button>
+
+        </form>
 
     </div>
 
