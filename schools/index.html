@@ -3,89 +3,1532 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutoring | EightyB</title>
-    <link rel="stylesheet" href="../style.css">
+
+    <title>IB Computer Science Tutoring in Warsaw | HL & SL | EightyB</title>
+
+    <meta name="description"
+          content="IB Diploma Computer Science tutoring in Warsaw and online. Support for IB Computer Science HL and SL students in IB1 and IB2, including programming, algorithms, exam preparation and IA guidance.">
+
+    <meta name="keywords"
+          content="IB Computer Science tutor Warsaw, IB Computer Science HL tutor, IB Computer Science SL tutor, IB DP Computer Science, IB tutor Warsaw, Computer Science tutoring Warsaw">
+
+    <meta name="author" content="EightyB">
+
+    <link rel="canonical" href="https://eightyb.github.io/schools/">
+
+    <style>
+
+        :root {
+            --bg: #f7f8fa;
+            --surface: #ffffff;
+            --text: #17202a;
+            --muted: #667085;
+            --accent: #315efb;
+            --accent-dark: #2347c7;
+            --border: #e5e7eb;
+            --dark: #111827;
+            --max-width: 1120px;
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .container {
+            width: min(var(--max-width), calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            background: rgba(255,255,255,0.96);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.35rem;
+            letter-spacing: -0.04em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            font-size: 0.95rem;
+        }
+
+            .nav-links a {
+                text-decoration: none;
+                color: #4b5563;
+            }
+
+                .nav-links a:hover {
+                    color: var(--text);
+                }
+
+        .nav-button {
+            background: var(--dark);
+            color: white !important;
+            padding: 10px 17px;
+            border-radius: 9px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            padding: 90px 0 85px;
+            background: radial-gradient( circle at top right, rgba(49,94,251,0.10), transparent 35% ), linear-gradient( 180deg, #ffffff 0%, #f7f8fa 100% );
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 750;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.7rem, 6vw, 5rem);
+            line-height: 0.98;
+            letter-spacing: -0.055em;
+            max-width: 850px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero-lead {
+            margin: 28px 0 0;
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 680px;
+        }
+
+        .hero-buttons {
+            margin-top: 34px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid transparent;
+            transition: 0.2s ease;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .button-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+            .button-primary:hover {
+                background: var(--accent-dark);
+                transform: translateY(-1px);
+            }
+
+        .button-secondary {
+            background: white;
+            border-color: var(--border);
+            color: var(--text);
+        }
+
+            .button-secondary:hover {
+                border-color: #c7cbd3;
+            }
+
+        .hero-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(16,24,40,0.08);
+        }
+
+        .hero-card-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .check-list li {
+                position: relative;
+                padding: 9px 0 9px 28px;
+                color: #4b5563;
+            }
+
+                .check-list li::before {
+                    content: "✓";
+                    position: absolute;
+                    left: 0;
+                    color: var(--accent);
+                    font-weight: 800;
+                }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 85px 0;
+        }
+
+        .section-header {
+            max-width: 720px;
+            margin-bottom: 42px;
+        }
+
+            .section-header h2 {
+                margin: 0 0 15px;
+                font-size: clamp(2rem, 4vw, 3rem);
+                line-height: 1.05;
+                letter-spacing: -0.04em;
+            }
+
+            .section-header p {
+                margin: 0;
+                color: var(--muted);
+                font-size: 1.08rem;
+            }
+
+
+        /* =========================
+           AUDIENCE
+        ========================= */
+
+        .audience {
+            background: var(--dark);
+            color: white;
+        }
+
+            .audience .section-header p {
+                color: #c4c9d2;
+            }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .audience-card {
+            padding: 28px;
+            border: 1px solid #303846;
+            border-radius: var(--radius);
+            background: #171e2b;
+        }
+
+            .audience-card h3 {
+                margin: 0 0 9px;
+                font-size: 1.25rem;
+            }
+
+            .audience-card p {
+                margin: 0;
+                color: #c4c9d2;
+            }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .service {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 27px;
+        }
+
+        .service-number {
+            color: var(--accent);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            margin-bottom: 17px;
+        }
+
+        .service h3 {
+            margin: 0 0 9px;
+            font-size: 1.16rem;
+        }
+
+        .service p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience {
+            background: white;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .experience-box {
+            background: var(--dark);
+            color: white;
+            border-radius: 22px;
+            padding: 40px;
+        }
+
+            .experience-box .big {
+                font-size: 3.2rem;
+                line-height: 1;
+                font-weight: 800;
+                letter-spacing: -0.05em;
+                margin-bottom: 12px;
+            }
+
+            .experience-box p {
+                color: #c4c9d2;
+                margin: 0;
+            }
+
+        .experience-text h2 {
+            margin-top: 0;
+            font-size: 2.5rem;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+        }
+
+        .experience-text p {
+            color: var(--muted);
+            font-size: 1.06rem;
+        }
+
+
+        /* =========================
+           FORMAT
+        ========================= */
+
+        .format-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .format-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+        }
+
+            .format-card h3 {
+                margin-top: 0;
+            }
+
+            .format-card p {
+                color: var(--muted);
+                margin-bottom: 0;
+            }
+
+
+        /* =========================
+   CONTACT / CTA
+========================= */
+
+        .cta {
+            padding: 95px 0;
+            background: #eef2ff;
+        }
+
+        .cta-box {
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        .cta-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+            .cta-heading h2 {
+                margin: 0 0 17px;
+                font-size: clamp(2.2rem, 5vw, 3.6rem);
+                line-height: 1;
+                letter-spacing: -0.05em;
+            }
+
+            .cta-heading p {
+                color: var(--muted);
+                font-size: 1.1rem;
+                margin: 0 auto;
+                max-width: 720px;
+            }
+
+
+        /* FORM CONTAINER */
+
+        .contact-form-wrapper {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(16, 24, 40, 0.08);
+        }
+
+
+        /* FORM GRID */
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 28px;
+            row-gap: 22px;
+            text-align: left;
+        }
+
+
+        /* EACH FIELD */
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+
+        /* LABEL */
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--text);
+        }
+
+
+        /* INPUTS */
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 9px;
+            background: #fff;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 1rem;
+            line-height: 1.4;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+
+            /* FOCUS */
+
+            .contact-form input:focus,
+            .contact-form select:focus,
+            .contact-form textarea:focus {
+                border-color: var(--accent);
+                box-shadow: 0 0 0 3px rgba(49, 94, 251, 0.12);
+            }
+
+
+        /* MESSAGE / FULL-WIDTH FIELDS */
+
+        .form-full {
+            grid-column: 1 / -1;
+        }
+
+
+        /* TEXTAREA */
+
+        .contact-form textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+
+        /* SMALL NOTE */
+
+        .form-note {
+            grid-column: 1 / -1;
+            margin: -4px 0 0;
+            color: var(--muted);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+
+        /* BUTTON */
+
+        .contact-form button {
+            grid-column: 1 / -1;
+            width: auto;
+            justify-self: start;
+            border: 0;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .contact-form {
+                grid-template-columns: 1fr;
+                row-gap: 20px;
+            }
+
+                .form-full,
+                .form-note,
+                .contact-form button {
+                    grid-column: auto;
+                }
+
+            .contact-form-wrapper {
+                padding: 25px;
+            }
+
+            .contact-form button {
+                width: 100%;
+            }
+        }
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq {
+            max-width: 850px;
+        }
+
+        details {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            padding: 20px 22px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 750;
+        }
+
+        details p {
+            color: var(--muted);
+            margin: 14px 0 0;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 45px 0;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 5px 0 0;
+            color: #aeb5c0;
+            font-size: 0.9rem;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links a:not(.nav-button) {
+                display: none;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero-grid,
+            .experience-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .services-grid,
+            .format-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+
+                .form-full,
+                .form-note,
+                .contact-form button {
+                    grid-column: auto;
+                }
+
+            .contact-form-wrapper {
+                padding: 22px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: min( var(--max-width), calc(100% - 28px) );
+            }
+
+            h1 {
+                font-size: 2.7rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 
+
 <body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
     <header>
-        <div class="brand">
-            <a href="index.html" class="logo">
-                <img src="images/eightyBCat.png" alt="EightyB">
+
+        <div class="container nav">
+
+            <a href="/" class="logo">
+                EightyB
             </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+
+                <a href="#tutoring">
+                    Tutoring
+                </a>
+
+                <a href="#experience">
+                    Experience
+                </a>
+
+                <a href="#faq">
+                    FAQ
+                </a>
+
+                <a href="#contact" class="nav-button">
+                    Enquire about tutoring
+                </a>
+
+            </nav>
+
         </div>
-        <div class="info">EightyB - Tutoring for Schools</div>
-        
+
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>School Tutoring</h1>
 
-            <h3>
-                EightyB Tutoring provides tutoring in Computer Science for secondary school pupils.<br />
-                EightyB Tutoring is English-based, available to any students of Computer Science.
-                Online tutoring is available to all; In-person classes are available in Warsaw, Poland.
-            </h3><br /><br /><br />
-            <h2>Tutoring in Computer Science with Alan Smith</h2><br />
-            <h3>"Make your weakest subject a strenght." - as I did with spelling.</h3>
-            <br /><br />
-                  <p>
-                      I previously set up and taught a Computer Science course at an IB school. <br />
-                      While the school syllabus may vary in secondary schools (Polish: szkoła średnia),
-                      tutoring is available to all secondary pupils who wish to improve their grades.<br /><br />
-                      Tutoring will focus on any specific aspects the students wish to strengthen.<br /><br />
-                      For IB or state schooling, Core or Advanced diploma, We can explore how computers work, from binary code to high level languages.
-                      From basic concepts like pseudcode to more advanced concepts like binary trees, I can help.<br /><br />
-                      For IB, the syllabus language is Java.
-                      We are not restricted. Perhaps you wish to use another language, such as C#.<br /><br />
-                      Night or online classes will be set up according to schedule availability.<br /><br />
-                  </p>
-
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-
-        <!-- div class="container"-->
-            <div >
-
-                <h2>Get in Touch</h2>
-                <p>
-                    Please provide your name, tel and preferred email. For school, indicate syllabus type ('IB Advanced', 'technikum basic' etc) <br />
-                    Optonally use message to provide some detail on yourself: areas to study, favourite tv show, whatever.<br /><br />
-                </p>
-                <form action="https://formspree.io/f/mgavzqlr" method="POST" class="contact-form">
-
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="school">School</label>
-                    <input type="text" id="school" name="school" required>
-
-                    <label for="grade">Grade</label>
-                    <input type="text" id="grade" name="grade" required>
-
-                    <label for="tel">Tel</label>
-                    <input type="text" id="tel" name="tel">
+    <main>
 
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+        <!-- =========================
+             HERO
+        ========================= -->
 
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
+        <section class="hero">
 
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6"></textarea>
+            <div class="container hero-grid">
 
-                    <button type="submit" class="button">Send Message</button>
+                <div>
 
-                </form>
+                    <div class="eyebrow">
+                        IB Diploma Computer Science · Warsaw & Online
+                    </div>
+
+                    <h1>
+                        IB Computer Science
+                        <span>tutoring.</span>
+                    </h1>
+
+                    <p class="hero-lead">
+                        Specialist Computer Science tuition for IB Diploma
+                        students in IB1 and IB2 — with support for HL and SL
+                        students, programming, problem solving, exam preparation
+                        and coursework.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#contact"
+                           class="button button-primary">
+                            Arrange a consultation
+                        </a>
+
+                        <a href="#tutoring"
+                           class="button button-secondary">
+                            See what I teach
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <aside class="hero-card">
+
+                    <div class="hero-card-title">
+                        IB DP Computer Science
+                    </div>
+
+                    <ul class="check-list">
+
+                        <li>IB1 and IB2</li>
+
+                        <li>HL and SL</li>
+
+                        <li>Programming and algorithms</li>
+
+                        <li>Exam preparation</li>
+
+                        <li>IA guidance and feedback</li>
+
+                        <li>Online or Warsaw-based lessons</li>
+
+                    </ul>
+
+                </aside>
 
             </div>
 
-</section>
+        </section>
+
+
+        <!-- =========================
+             AUDIENCE
+        ========================= -->
+
+        <section class="audience">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <h2>
+                        Support for the two years that matter.
+                    </h2>
+
+                    <p>
+                        Focused tuition for students working towards the
+                        IB Diploma, whether they need to strengthen their
+                        foundations or prepare intensively for assessment.
+                    </p>
+
+                </div>
+
+
+                <div class="audience-grid">
+
+                    <div class="audience-card">
+
+                        <h3>
+                            IB1
+                        </h3>
+
+                        <p>
+                            Build a strong understanding of the course early,
+                            develop programming confidence and avoid gaps
+                            becoming problems later in the Diploma.
+                        </p>
+
+                    </div>
+
+
+                    <div class="audience-card">
+
+                        <h3>
+                            IB2
+                        </h3>
+
+                        <p>
+                            Consolidate knowledge, practise exam-style problems,
+                            identify weak areas and prepare systematically for
+                            the final assessments.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TUTORING
+        ========================= -->
+
+        <section id="tutoring">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="eyebrow">
+                        What I can help with
+                    </div>
+
+                    <h2>
+                        Computer Science tuition built around the student.
+                    </h2>
+
+                    <p>
+                        Lessons can be focused on a particular topic, ongoing
+                        weekly support, assessment preparation or a combination
+                        of all three.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Programming
+                        </h3>
+
+                        <p>
+                            Develop confidence writing, reading, debugging
+                            and explaining programs and computational solutions.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Algorithms
+                        </h3>
+
+                        <p>
+                            Understand algorithmic thinking, problem solving,
+                            complexity and the reasoning behind solutions.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Computer systems
+                        </h3>
+
+                        <p>
+                            Work through theoretical concepts and learn how
+                            to approach questions requiring precise explanations.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Exam preparation
+                        </h3>
+
+                        <p>
+                            Practise exam-style questions, identify recurring
+                            mistakes and develop a structured revision strategy.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            05
+                        </div>
+
+                        <h3>
+                            IA guidance
+                        </h3>
+
+                        <p>
+                            Guidance, feedback and discussion to help students
+                            understand their work, make decisions and improve
+                            their own submissions.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            06
+                        </div>
+
+                        <h3>
+                            Individual support
+                        </h3>
+
+                        <p>
+                            Lessons are adapted to the student's current level,
+                            school programme, goals and areas of difficulty.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EXPERIENCE
+        ========================= -->
+
+        <section class="experience" id="experience">
+
+            <div class="container experience-grid">
+
+
+                <div class="experience-box">
+
+                    <div class="big">
+                        IB CS
+                    </div>
+
+                    <p>
+                        Teaching and curriculum experience,
+                        combined with individual Computer Science tuition.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-text">
+
+                    <div class="eyebrow">
+                        Why EightyB
+                    </div>
+
+                    <h2>
+                        Learn Computer Science from someone who has taught it.
+                    </h2>
+
+                    <p>
+                        I have experience developing and teaching an
+                        International Baccalaureate Computer Science course.
+                        That means the focus is not simply on learning to code:
+                        students also need to understand concepts, explain
+                        solutions clearly and work effectively within the
+                        requirements of the Diploma Programme.
+                    </p>
+
+                    <p>
+                        Lessons are structured around what the student actually
+                        needs — whether that means rebuilding fundamentals,
+                        working through difficult programming problems or
+                        preparing for examinations.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FORMAT
+        ========================= -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="eyebrow">
+                        Flexible tuition
+                    </div>
+
+                    <h2>
+                        Online or in Warsaw.
+                    </h2>
+
+                    <p>
+                        Choose the format that works best for the student.
+                    </p>
+
+                </div>
+
+
+                <div class="format-grid">
+
+
+                    <div class="format-card">
+
+                        <h3>
+                            Online
+                        </h3>
+
+                        <p>
+                            One-to-one lessons from anywhere.
+                            Suitable for students in Warsaw and internationally.
+                        </p>
+
+                    </div>
+
+
+                    <div class="format-card">
+
+                        <h3>
+                            Warsaw
+                        </h3>
+
+                        <p>
+                            In-person tuition can be arranged in Warsaw,
+                            subject to location and availability.
+                        </p>
+
+                    </div>
+
+
+                    <div class="format-card">
+
+                        <h3>
+                            One-to-one
+                        </h3>
+
+                        <p>
+                            Individual lessons allow the pace and content
+                            to follow the student's needs rather than a
+                            fixed class.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================= -->
+
+        <section class="cta" id="contact">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div class="cta-heading">
+
+                        <div class="eyebrow">
+                            IB Computer Science tutoring
+                        </div>
+
+                        <h2>
+                            Tell me what the student needs.
+                        </h2>
+
+                        <p>
+                            Send a few details about the student's IB year,
+                            level and current situation. I'll get back to you
+                            to discuss the most appropriate approach.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-form-wrapper">
+
+
+                        <!--
+                            FORM SUBMITTED TO FORMSPREE
+                        -->
+
+                        <form action="https://formspree.io/f/mgavzqlr"
+                              method="POST"
+                              class="contact-form">
+
+
+                            <div class="form-field">
+
+                                <label for="name">
+                                    Name
+                                </label>
+
+                                <input type="text"
+                                       id="name"
+                                       name="name"
+                                       autocomplete="name"
+                                       required>
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="tel">
+                                    Phone
+                                </label>
+
+                                <input type="tel"
+                                       id="tel"
+                                       name="tel"
+                                       autocomplete="tel">
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input type="email"
+                                       id="email"
+                                       name="email"
+                                       autocomplete="email"
+                                       required>
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="ib-year">
+                                    IB Year
+                                </label>
+
+                                <select id="ib-year"
+                                        name="ib_year">
+
+                                    <option value="">
+                                        Please select
+                                    </option>
+
+                                    <option value="IB1">
+                                        IB1
+                                    </option>
+
+                                    <option value="IB2">
+                                        IB2
+                                    </option>
+
+                                    <option value="Not sure">
+                                        Not sure
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="level">
+                                    Computer Science level
+                                </label>
+
+                                <select id="level"
+                                        name="level">
+
+                                    <option value="">
+                                        Please select
+                                    </option>
+
+                                    <option value="HL">
+                                        HL
+                                    </option>
+
+                                    <option value="SL">
+                                        SL
+                                    </option>
+
+                                    <option value="Not sure">
+                                        Not sure
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="school">
+                                    School
+                                </label>
+
+                                <input type="text"
+                                       id="school"
+                                       name="school"
+                                       placeholder="School name">
+
+                            </div>
+
+
+                            <div class="form-field form-full">
+
+                                <label for="subject">
+                                    Subject
+                                </label>
+
+                                <input type="text"
+                                       id="subject"
+                                       name="subject"
+                                       value="IB Computer Science tutoring"
+                                       required>
+
+                            </div>
+
+
+                            <div class="form-field form-full">
+
+                                <label for="message">
+                                    Message
+                                </label>
+
+                                <textarea id="message"
+                                          name="message"
+                                          rows="6"
+                                          placeholder="Tell me a little about the student's current situation and what help they are looking for."
+                                          required></textarea>
+
+                            </div>
+
+
+                            <p class="form-note">
+                                Your information will only be used to respond
+                                to this enquiry.
+                            </p>
+
+
+                            <button type="submit"
+                                    class="button button-primary">
+
+                                Send enquiry
+
+                            </button>
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FAQ
+        ========================= -->
+
+        <section id="faq">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="eyebrow">
+                        Questions
+                    </div>
+
+                    <h2>
+                        Frequently asked questions.
+                    </h2>
+
+                </div>
+
+
+                <div class="faq">
+
+
+                    <details>
+
+                        <summary>
+                            Do you teach IB Computer Science HL and SL?
+                        </summary>
+
+                        <p>
+                            Yes. Tuition is available for both Higher Level and
+                            Standard Level students. The content and pace are
+                            adapted to the student's course and needs.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Do you teach IB1 and IB2?
+                        </summary>
+
+                        <p>
+                            Yes. IB1 students can use lessons to build strong
+                            foundations and stay on top of the course, while
+                            IB2 students can focus on consolidation, assessment
+                            and exam preparation.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Can you help with the Internal Assessment?
+                        </summary>
+
+                        <p>
+                            Yes. Support can include discussing ideas,
+                            understanding requirements, reviewing work and
+                            providing feedback. The student's submitted work
+                            must remain their own.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Do I need to be in Warsaw?
+                        </summary>
+
+                        <p>
+                            No. Online lessons are available, so students can
+                            work with EightyB from anywhere.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Is this suitable for a student who is struggling?
+                        </summary>
+
+                        <p>
+                            Yes. The first step is to identify where the
+                            difficulty lies. Lessons can then concentrate on
+                            missing foundations, specific topics, programming
+                            problems or exam technique.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Can lessons be intensive before exams?
+                        </summary>
+
+                        <p>
+                            Yes. Intensive revision can be arranged around
+                            particular topics, past-paper practice and the
+                            student's remaining areas of difficulty.
+                        </p>
+
+                    </details>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <strong>
+                    EightyB
+                </strong>
+
+                <p>
+                    IB Computer Science tutoring · Warsaw & Online
+                </p>
+
+            </div>
+
+            <div>
+
+                <a href="#contact">
+                    Enquire about tutoring
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
 </body>
 </html>
-
