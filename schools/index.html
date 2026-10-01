@@ -60,15 +60,25 @@
         /* =========================
            NAVIGATION
         ========================= */
-
         header {
+            background: linear-gradient( 180deg, #B83D4D 0%, #8F1D2C 35%, #A52A3A 48%, #751522 100% );
+            color: whitesmoke;
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-bottom: 1px solid var(--border);
+            
+        }
+        /*header {
             background: rgba(255,255,255,0.96);
             border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
-        }
+        } */
 
         .nav {
             min-height: 70px;
@@ -94,7 +104,8 @@
 
             .nav-links a {
                 text-decoration: none;
-                color: #4b5563;
+                /* color: #4b5563; */
+                color: whitesmoke;
             }
 
                 .nav-links a:hover {
@@ -606,7 +617,7 @@
         footer {
             background: var(--dark);
             color: white;
-            padding: 45px 0;
+            padding: 45px 0 30px;
         }
 
         .footer-grid {
@@ -622,6 +633,23 @@
             font-size: 0.9rem;
         }
 
+        /* AI disclosure */
+
+        footer .ai-disclosure {
+            display: block;
+            margin: 25px 0 0;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            color: #aeb5c0;
+            font-size: 0.78rem;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+            footer .ai-disclosure strong {
+                color: white;
+                font-weight: 600;
+            }
 
         /* =========================
            MOBILE
@@ -1526,7 +1554,22 @@
             </div>
 
         </div>
-
+        <div class="container">
+            <div style="
+        margin-top: 25px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+        color: #aeb5c0;
+        font-size: 9px;
+        line-height: 1.6;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    ">
+                <strong style="color: white;">Website note:</strong>
+                This website was created with assistance from AI and reviewed by EightyB.
+            </div>
+        </div>
     </footer>
 
 
